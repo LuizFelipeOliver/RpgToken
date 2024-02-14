@@ -204,7 +204,6 @@ public class RpgSheet {
         MermaidTriton,
         Sílfide,
         Suraggels,
-        Suraggels,
         Trog
 
     }
