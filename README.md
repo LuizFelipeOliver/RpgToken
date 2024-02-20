@@ -1,7 +1,7 @@
 #Este projeto de Gerenciamento de ficha de rpg de mesa
 Tecnologias:
 <ul>
-  <li><Java/li>
+  <li>Java</li>
   <li>Maeven</li>
   <li>Spring</li>
   <li>Kafka</li>
