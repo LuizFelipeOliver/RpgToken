@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -30,11 +31,15 @@ public class UserService {
         }
     }
 
-    public User findByUserName(String userName) {
-        Optional<User> userOptional = Optional.ofNullable(userRepository.findByUserName(userName));
+    public User findById(Long id) {
+        Optional<User> userOptional = userRepository.findById(id);
 
         return userOptional.orElseThrow(() ->
-                new NoSuchElementException("Usuário não encontrado com o nome: " + userName)
+                new NoSuchElementException("Usuário não encontrado com o nome: " + id)
         );
     }
+    public List<User> findAllUsers() {
+        return userRepository.findAll();
+    }
+
 }
